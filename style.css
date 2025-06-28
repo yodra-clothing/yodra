@@ -9,11 +9,8 @@ body {
   background: linear-gradient(135deg, #111, #222);
   color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* 🟢 Stack items vertically */
   min-height: 100vh;
-  padding: 20px;
-  text-align: center;
 }
 
 .container {
@@ -23,7 +20,10 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   animation: fadeIn 1s ease forwards;
+  margin: 40px auto;              /* 🟢 Center horizontally with top space */
+  text-align: center;
 }
+
 
 .logo-image {
   width: 120px;
@@ -125,4 +125,54 @@ p {
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+/* Footer Styles */
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li,
+.footer-section a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
 }
